@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DeeKen Hostel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #2d3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background: #1c2938;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: #4a90e2;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .hero {
+      background: #4a90e2;
+      color: white;
+      padding: 40px;
+      text-align: center;
+      border-radius: 0;
+    }
+
+    form input, form select, form button, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #2d3e50;
+      color: white;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #4a90e2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2d3e50;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .nav-section {
+      display: none;
+    }
+
+    .nav-section.active {
+      display: block;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.nav-section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    window.onload = () => showSection('home');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>DeeKen Hostel</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About</a></li>
+        <li><a href="#" onclick="showSection('rooms')">Rooms</a></li>
+        <li><a href="#" onclick="showSection('booking')">Booking</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero nav-section" id="home">
+    <h2>Welcome to DeeKen Hostel</h2>
+    <p>Affordable comfort in the heart of Caramoan.</p>
+  </section>
+
+  <section class="nav-section" id="about">
+    <h2>About Us</h2>
+    <p>DeeKen Hostel offers affordable, clean, and cozy accommodations perfect for travelers, backpackers, and island hoppers visiting Caramoan. Our friendly staff and relaxing ambiance make you feel right at home.</p>
+  </section>
+
+  <section class="nav-section" id="rooms">
+    <h2>Our Rooms</h2>
+    <ul>
+      <li><strong>Single Room</strong> – Perfect for solo travelers</li>
+      <li><strong>Double Room</strong> – For couples or friends</li>
+      <li><strong>Family Room</strong> – Comfort for the whole family</li>
+    </ul>
+  </section>
+
+  <section class="nav-section" id="booking">
+    <h2>Book Your Stay</h2>
+    <form onsubmit="alert('Booking submitted! We will contact you soon.'); return false;">
+      <label>Full Name:<br><input type="text" required></label>
+      <label>Email:<br><input type="email" required></label>
+      <label>Check-in Date:<br><input type="date" required></label>
+      <label>Check-out Date:<br><input type="date" required></label>
+      <label>Room Type:<br>
+        <select required>
+          <option>Single</option>
+          <option>Double</option>
+          <option>Family</option>
+        </select>
+      </label>
+      <label>Special Requests:<br><textarea rows="4" placeholder="Any additional requests?"></textarea></label>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <section class="nav-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Tawog, Caramoan, Philippines<br>📞 0912-345-6789<br>✉ contact@deekenhostel.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DeeKen Hostel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
