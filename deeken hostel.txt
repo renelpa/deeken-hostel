@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to DeeKen Hostel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(45deg, #2c3e50, #1abc9c);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(44, 62, 80, 0.9);
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+      background-image: url('https://via.placeholder.com/1600x800'); /* Background Image */
+      background-size: cover;
+      background-position: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(26, 188, 156, 0.9);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #16a085;
+      transform: scale(1.1);
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background-color: white;
+      color: #333;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1abc9c;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #16a085;
+    }
+
+    footer {
+      background-color: rgba(44, 62, 80, 0.9);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DeeKen Hostel</h1>
+    <p>Your cozy stay in paradise starts here</p>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#location">Location</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Welcome to DeeKen Hostel, your home away from home. We offer affordable, comfortable, and clean accommodations for travelers exploring the beautiful Caramoan Peninsula.</p>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+      <h2>Rooms</h2>
+      <ul>
+        <li>🌿 Standard Room - ₱800/night</li>
+        <li>🌊 Air-conditioned Room - ₱1200/night</li>
+        <li>👨‍👩‍👧‍👦 Family Room - ₱1800/night</li>
+        <li>👯‍♀️ Dormitory Style - ₱350/head</li>
+      </ul>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities">
+      <h2>Amenities</h2>
+      <ul>
+        <li>✅ Free Wi-Fi</li>
+        <li>✅ Hot & Cold Shower</li>
+        <li>✅ Kitchen & Dining Area</li>
+        <li>✅ Tour Assistance</li>
+        <li>✅ 24/7 Front Desk</li>
+      </ul>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+      <h2>Our Location</h2>
+      <p>📍 Barangay Tawog, Caramoan, Camarines Sur</p>
+      <p>Just 5 minutes from the town center and 10 minutes from the port. Perfect for island hopping!</p>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking">
+      <h2>Booking Form</h2>
+      <form action="your-backend-script.php" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="checkin">Check-in Date</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+
+        <div class="form-group">
+          <label for="checkout">Check-out Date</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+
+        <div class="form-group">
+          <label for="room">Room Type</label>
+          <select id="room" name="room" required>
+            <option value="Standard Room">Standard Room - ₱800/night</option>
+            <option value="Air-conditioned Room">Air-conditioned Room - ₱1200/night</option>
+            <option value="Family Room">Family Room - ₱1800/night</option>
+            <option value="Dormitory">Dormitory Style - ₱350/head</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="special-request">Special Requests</label>
+          <textarea id="special-request" name="special_request" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Booking</button>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>📞 Phone: 0912 345 6789</p>
+      <p>📧 Email: deekenhostel@example.com</p>
+      <p>📘 Facebook: <a href="https://facebook.com/deekenhostel" target="_blank">facebook.com/deekenhostel</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DeeKen Hostel. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
